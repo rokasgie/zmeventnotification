@@ -15,7 +15,7 @@ AUTHOR_EMAIL = 'pliablepixels@gmail.com'
 AUTHOR = 'Pliable Pixels'
 LICENSE = 'GPL'
 INSTALL_REQUIRES = [
-    'numpy', 'requests', 'Shapely', 'imutils', 
+    'numpy==1.26.4', 'requests', 'Shapely', 'imutils', 
     'pyzm>=0.3.57', 'scikit-learn', 'future', 'imageio',
     'imageio-ffmpeg','pygifsicle', 'Pillow', 'configupdater'
 ]
