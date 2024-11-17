@@ -227,6 +227,7 @@ def import_zm_zones(mid, reason):
             'pattern': None
 
         })
+    g.logger.Debug(2, f"Polygons appended: {g.polygons}")
 
 
 # downloaded ZM image files for future analysis
@@ -513,6 +514,8 @@ def process_config(args, ctx):
 
     # Now lets make sure we take care of parameter substitutions {{}}
 
+    g.logger.Debug(2, f"Polygons returned: {g.polygons}")
+
     g.logger.Debug(3, 'Finally, doing parameter substitution')
     p = r'{{(\w+?)}}'
     for gk, gv in g.config.items():
@@ -545,3 +548,5 @@ def process_config(args, ctx):
         g.logger.Debug(1, 'Output path modified to {}'.format(args.get('output_path')))
         g.config['image_path'] = args.get('output_path')
         g.config['write_debug_image'] = 'yes'
+
+    g.logger.Debug(2, f"Polygons end: {g.polygons}")

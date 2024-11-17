@@ -94,7 +94,7 @@ if len(sys.argv) == 7:
     image_path =  sys.argv[6]
     fname=get_image(image_path, cause)
 
-    zmlog.Debug (1,'eid:{} Image to be used is: {}'.format(eid,fname))
+    zmlog.Debug(1,'eid:{} Image to be used is: {}'.format(eid,fname))
     f,e=os.path.splitext(fname)
     if e.lower() == '.mp4':
         ctype = 'video/mp4'

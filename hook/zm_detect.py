@@ -357,6 +357,7 @@ def main_handler():
     # These are stream options that need to be set outside of supplied configs
     stream_options['api'] = zmapi
     stream_options['polygons'] = g.polygons
+    g.logger.Debug(3, 'Found polygons: {}'.format(g.polygons))
     g.config['stream_sequence'] = stream_options
 
     '''
